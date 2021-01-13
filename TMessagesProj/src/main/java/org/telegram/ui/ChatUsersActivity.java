@@ -2196,6 +2196,7 @@ public class ChatUsersActivity extends BaseFragment implements NotificationCente
         public SearchAdapter(Context context) {
             mContext = context;
             searchAdapterHelper = new SearchAdapterHelper(true);
+            searchAdapterHelper.setAllowGlobalResults(false);
             searchAdapterHelper.setDelegate(searchId -> {
                 if (!searchAdapterHelper.isSearchInProgress()) {
                     int oldItemCount = getItemCount();

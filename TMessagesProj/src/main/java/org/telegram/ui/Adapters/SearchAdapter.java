@@ -75,6 +75,7 @@ public class SearchAdapter extends RecyclerListView.SelectionAdapter {
         allowSelf = self;
         allowPhoneNumbers = phones;
         searchAdapterHelper = new SearchAdapterHelper(true);
+        searchAdapterHelper.setAllowGlobalResults(false);
         searchAdapterHelper.setDelegate(new SearchAdapterHelper.SearchAdapterHelperDelegate() {
             @Override
             public void onDataSetChanged(int searchId) {

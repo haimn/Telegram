@@ -874,6 +874,7 @@ public class GroupVoipInviteAlert extends BottomSheet {
         public SearchAdapter(Context context) {
             mContext = context;
             searchAdapterHelper = new SearchAdapterHelper(true);
+            searchAdapterHelper.setAllowGlobalResults(false);
             searchAdapterHelper.setDelegate(new SearchAdapterHelper.SearchAdapterHelperDelegate() {
                 @Override
                 public void onDataSetChanged(int searchId) {

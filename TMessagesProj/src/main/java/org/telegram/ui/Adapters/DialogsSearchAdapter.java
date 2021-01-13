@@ -174,6 +174,7 @@ public class DialogsSearchAdapter extends RecyclerListView.SelectionAdapter {
     public DialogsSearchAdapter(Context context, int messagesSearch, int type, int folderId) {
         this.folderId = folderId;
         searchAdapterHelper = new SearchAdapterHelper(false);
+        searchAdapterHelper.setAllowGlobalResults(false);
         searchAdapterHelper.setDelegate(new SearchAdapterHelper.SearchAdapterHelperDelegate() {
             @Override
             public void onDataSetChanged(int searchId) {

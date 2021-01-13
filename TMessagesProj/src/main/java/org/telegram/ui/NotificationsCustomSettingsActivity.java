@@ -878,6 +878,7 @@ public class NotificationsCustomSettingsActivity extends BaseFragment {
         public SearchAdapter(Context context) {
             mContext = context;
             searchAdapterHelper = new SearchAdapterHelper(true);
+            searchAdapterHelper.setAllowGlobalResults(false);
             searchAdapterHelper.setDelegate((searchId) -> {
                 if (searchRunnable == null && !searchAdapterHelper.isSearchInProgress()) {
                     emptyView.showTextView();

@@ -1192,6 +1192,7 @@ public class GroupCreateActivity extends BaseFragment implements NotificationCen
             }
 
             searchAdapterHelper = new SearchAdapterHelper(false);
+            searchAdapterHelper.setAllowGlobalResults(false);
             searchAdapterHelper.setDelegate((searchId) -> {
                 showItemsAnimated(currentItemsCount);
                 if (searchRunnable == null && !searchAdapterHelper.isSearchInProgress() && getItemCount() == 0) {

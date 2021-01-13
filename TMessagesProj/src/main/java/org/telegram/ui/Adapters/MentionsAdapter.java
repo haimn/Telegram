@@ -138,6 +138,7 @@ public class MentionsAdapter extends RecyclerListView.SelectionAdapter {
         isDarkTheme = darkTheme;
         dialog_id = did;
         searchAdapterHelper = new SearchAdapterHelper(true);
+        searchAdapterHelper.setAllowGlobalResults(false);
         searchAdapterHelper.setDelegate(new SearchAdapterHelper.SearchAdapterHelperDelegate() {
             @Override
             public void onDataSetChanged(int searchId) {

@@ -4220,6 +4220,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
         public GroupUsersSearchAdapter(Context context) {
             mContext = context;
             searchAdapterHelper = new SearchAdapterHelper(true);
+            searchAdapterHelper.setAllowGlobalResults(false);
             searchAdapterHelper.setDelegate(searchId -> {
                 notifyDataSetChanged();
                 if (searchId == 1) {
